@@ -1,0 +1,16 @@
+name: TESTINPUTS
+
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: 'The username'
+        required: true
+        default: 'user'
+
+jobs:
+  testing-manual-trigger-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing-input
+        run: echo "Testing is working! The username is ${{ github.event.inputs.username }}"
