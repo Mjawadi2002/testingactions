@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  testing-manual-trigger:
     runs-on: ubuntu-latest
     steps:
       - name: Testing
