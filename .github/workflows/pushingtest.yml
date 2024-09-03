@@ -9,6 +9,14 @@ on:
 jobs:
   testing-on-push:
     runs-on: ubuntu-latest
+
     steps:
       - name: Testing
-        run: echo "Pushing is working, and my variable is ${{ secrets.secret1 }}!"
+        run: echo "Pushing is working, and my variable is ${{ env.variable1 }}!"
+
+      - name: Testing Context
+        run: |
+          echo "The repository name is ${{ github.repository }}"
+          echo "The ref ID is ${{ github.ref }}"
+          echo "The actor is ${{ github.actor }}"
+          echo "The commit SHA is ${{ github.sha }}"
