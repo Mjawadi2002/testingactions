@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Testing
-        run: echo "Pushing is working, and my variable is ${{ env.variable1 }}!"
+        run: echo "Pushing is working, and my variable is ${{ vars.variable1 }}!"
 
       - name: Testing Context
         run: |
