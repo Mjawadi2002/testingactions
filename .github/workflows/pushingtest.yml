@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Testing
-        run: echo "Pushing is working, and my variable is ${{ secrets.variable1 }}!"
+        run: echo "Pushing is working, and my variable is ${{ secrets.VARIABLE1 }}!"
